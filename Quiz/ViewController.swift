@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     
     var currentQuestionIndex: Int = 0
     
+    override func viewDidLoad() {
+        questionLabel.text = questions[currentQuestionIndex]
+    }
+    
     @IBAction func showNextQuestion(sender: AnyObject) {
     ++currentQuestionIndex
         if currentQuestionIndex == questions.count {
